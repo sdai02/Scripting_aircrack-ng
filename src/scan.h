@@ -1,6 +1,6 @@
 #ifndef SCAN_H
 #define SCAN_H
 
-void scan(char *value);
+int scan(char *wirlessCarte);
 
 #endif

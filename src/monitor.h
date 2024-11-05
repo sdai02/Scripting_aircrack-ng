@@ -1,6 +1,6 @@
 #ifndef MONITOR_H
 #define MONITOR_H
 
-void monitor(char *value);
+int monitor(char *wirlessCarte);
 
 #endif

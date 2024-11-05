@@ -4,16 +4,12 @@
 #include <stdint.h>
 #include "monitor.h"
 
-void scan (char *value){
+int scan (char *wirlessCarte){
     char commande[100];
     
-    snprintf(commande, sizeof(commande), "sudo airodump-ng %s", value);
+    snprintf(commande, sizeof(commande), "sudo airodump-ng %s", wirlessCarte);
     
-    
-    int status = system(commande);
-    if (status == -1) {
-        printf("\n");
-    } else {
-        printf("\n");
-    }
+    system(commande);
+
+   return 0;
 }   

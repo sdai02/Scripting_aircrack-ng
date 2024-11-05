@@ -4,15 +4,12 @@
 #include <stdint.h>
 #include "monitor.h"
 
-void monitor(char *value){
+int monitor(char *wirlessCarte){
     
     char commande[100];
-    snprintf(commande, sizeof(commande), "sudo airmon-ng start %s", value);
+    snprintf(commande, sizeof(commande), "sudo airmon-ng start %s", wirlessCarte);
 
-    int status = system(commande);
-    if (status == -1) {
-        printf("\n");
-    } else {
-        printf("\n");
-    }
+    system(commande);
+
+    return 0;
 }
