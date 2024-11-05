@@ -1,7 +1,3 @@
-// to start the script : main.c src/handshake.c src/scan.c src/deathauth.c  src/monitor.c src/crack.c -o main && ./main 
-
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
