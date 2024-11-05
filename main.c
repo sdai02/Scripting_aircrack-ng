@@ -6,6 +6,7 @@
 #include "src/scan.h"
 #include "src/handshake.h"
 #include "src/deathauth.h"
+#include "src/crack.h"
 
 int main (int argv, char *argc[]){
 
@@ -35,7 +36,7 @@ int main (int argv, char *argc[]){
 
         } else if (strcmp(argc[1], "-c") == 0){
 
-            
+            crack(argc[2], argc[3]);
 
         } else if (strcmp(argc[1], "--help")){
             
