@@ -14,6 +14,7 @@ This project provides a script to assist in cracking WPA/WPA2 encrypted Wi-Fi ne
 
 - **Linux Operating System**: This script is designed to run on a Linux distribution (e.g., Ubuntu, Kali Linux).
 - **Aircrack-ng**: Ensure that you have Aircrack-ng installed. You can install it using the following command:
+  
   ```bash
   sudo apt-get install aircrack-ng
   ```
