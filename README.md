@@ -1,6 +1,13 @@
 # Scripting_aircrack-ng
-This project is intended for educational purposes.
 
+## Important Notes
+
+- **Ethical Use**: This script is intended for educational purposes and should only be used on networks for which you have permission to test.
+- **Wordlists**: You can find various wordlists online (e.g., `rockyou.txt`), or create your own.
+
+## Disclaimer
+
+This software is intended for educational purposes only. The authors are not responsible for any misuse or damage caused by the use of this tool. Always obtain explicit permission before testing or attempting to crack any network. Unauthorized access to networks is illegal and unethical.
 
 ## Overview
 
@@ -48,12 +55,4 @@ gcc main.c src/handshake.c src/scan.c src/deathauth.c src/monitor.c src/crack.c 
    ./main -c [path_to_wordlist] [target_bssid]
    ```
 
-## Important Notes
-
-- **Ethical Use**: This script is intended for educational purposes and should only be used on networks for which you have permission to test.
-- **Wordlists**: You can find various wordlists online (e.g., `rockyou.txt`), or create your own.
-
-## Disclaimer
-
-This software is intended for educational purposes only. The authors are not responsible for any misuse or damage caused by the use of this tool. Always obtain explicit permission before testing or attempting to crack any network. Unauthorized access to networks is illegal and unethical.
 
