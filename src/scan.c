@@ -4,12 +4,21 @@
 #include <stdint.h>
 #include "monitor.h"
 
-int scan (char *wirlessCarte){
+
+
+
+int scan (char *wirlessCard){
+    
+    // Declare a buffer to hold the command string.
     char commande[100];
+
+    // Format the command string to execute the airodump-ng tool with the provided wireless card.
+    snprintf(commande, sizeof(commande), "sudo airodump-ng %s", wirlessCard);
     
-    snprintf(commande, sizeof(commande), "sudo airodump-ng %s", wirlessCarte);
-    
+    // Execute the command.
     system(commande);
+
+    
 
    return 0;
 }   

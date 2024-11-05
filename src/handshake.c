@@ -6,10 +6,14 @@
 
 
 
-int handshake (char *channel, char *macAdresse, char *wirlessCarte){
+int handshake (char *channel, char *macAddress, char *wirlessCard){
+    // Declare a buffer to hold the command string.
     char commande[100];
-    snprintf(commande, sizeof(commande), "sudo airodump-ng -c %s --bssid %s -w psk %s", channel, macAdresse, wirlessCarte);
 
+    // Constructs the command to start capturing the handshake on the specified access point.
+    snprintf(commande, sizeof(commande), "sudo airodump-ng -c %s --bssid %s -w psk %s", channel, macAddress, wirlessCard);
+
+    // Executes the command.
     system(commande);
    
 
