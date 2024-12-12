@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from .src.handler_commands import subprocess, monitor, scan, handshake, deathauth, crack
+from src.handler_commands import subprocess, monitor, scan, handshake, deathauth, crack
 import sys 
 
 def main():
@@ -20,7 +20,7 @@ def main():
                 case "-s" | "--scan":
                     scan(sys.argv[2])
 
-                case "-h" | "--handshake":
+                case "-ha" | "--handshake":
                     handshake(sys.argv[2], sys.argv[3], sys.argv[4])
                 
                 case "-d" | "--deathauth":
@@ -30,8 +30,8 @@ def main():
                     crack(sys.argv[2], sys.argv[3])
 
                 case "-h" | "--help":
-                    f = open("help.txt", "r")
-                    print(f.read)
+                    with open("src/help.txt", "r") as txt:
+                        print(txt.read())
 
         
         except subprocess.CalledProcessError as e:
