@@ -1,0 +1,40 @@
+Usage: script.py [OPTION] [ARGUMENTS]
+
+Options:
+  -ms, --monitoring_scaning      Enable monitoring mode and perform scanning.
+                                 Arguments: <interface>
+
+  -m, --monitoring               Enable monitoring mode only.
+                                 Arguments: <interface>
+
+  -s, --scan                     Perform scanning only.
+                                 Arguments: <interface>
+
+  -h, --help                     Display this help text.
+
+  -wpa                           WPA-specific operations.
+    -ha, --handshake             Capture handshake packets.
+                                 Arguments: <interface> <BSSID> <channel>
+    -d, --deathauth              Perform deauthentication attack.
+                                 Arguments: <interface> <BSSID> <client> <channel>
+    -c, --cracking               Crack WPA/WPA2 key using a handshake file.
+                                 Arguments: <handshake_file> <wordlist>
+
+  -wep                           Placeholder for WEP operations.
+  -wps                           Placeholder for WPS operations.
+
+Examples:
+  Enable monitoring mode:
+    script.py -m wlan0
+
+  Perform monitoring and scanning:
+    script.py -ms wlan0
+
+  Capture WPA handshake:
+    script.py -wpa -ha wlan0 00:11:22:33:44:55 6
+
+  Deauthentication attack:
+    script.py -wpa -d wlan0 00:11:22:33:44:55 11:22:33:44:55:66 6
+
+  Crack WPA key:
+    script.py -wpa -c handshake.cap wordlist.txt
