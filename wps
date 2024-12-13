@@ -1,0 +1,6 @@
+Les commandes 
+sudo apt update sudo apt install wifite
+sudo wifite
+sudo wifite --wps
+sudo reaver -i wlan0 -b <BSSID> -c <CHANNEL> --no-nacks
+
